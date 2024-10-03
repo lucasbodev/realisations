@@ -1,0 +1,37 @@
+.draggable-container {
+  position: relative;
+  transition: width 0.4s ease-out;
+  z-index: 1;
+  padding-left: 0;
+  width: 32rem;
+  display: flex;
+  gap: 2rem;
+  cursor: url("http://localhost/wp-content/plugins/realisations/assets/swipe.svg"), auto;
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+  /* Chrome */
+}
+.draggable-container::-webkit-scrollbar {
+  display: none;
+}
+.draggable-container.open {
+  width: 100%;
+  overflow-x: auto;
+  padding-left: calc((100vw - 44.8rem) / 2);
+  padding-right: 2rem;
+}
+@media (max-width: 768px) {
+  .draggable-container.open {
+    padding-left: 1rem;
+  }
+}
+.draggable-container.closed {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .draggable-container {
+    width: calc(100vw - 4rem);
+  }
+}/*# sourceMappingURL=Draggable.css.map */

@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: hsl(0, 0%, 10%);
+}
+
+.loading-wrapper {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* WordPress reset */
+.wp-plugin-wrapper {
+  max-width: none;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.entry-content {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,43 @@
+@use '../../variables' as variables;
+@use '../../mixins' as mixins;
+
+.draggable-container {
+    position: relative;
+    transition: width variables.$transition-fast ease-out;
+    z-index: 1;
+    padding-left: 0;
+    width: variables.$first-item-width;
+    display: flex;
+    gap: variables.$spacing-unit;
+    cursor: url('http://localhost/wp-content/plugins/realisations/assets/swipe.svg'), auto;
+
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* Chrome */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &.open {
+        width: 100%;
+        overflow-x: auto;
+        padding-left: calc((100vw - (variables.$first-item-width * variables.$scale)) / 2);
+        padding-right: variables.$spacing-unit;
+
+        @include mixins.tablet {
+            padding-left: variables.$spacing-small;
+        }
+    }
+
+    &.closed {
+        cursor: pointer;
+    }
+
+    @include mixins.tablet {
+        width: variables.$tablet-first-item-width;
+    }
+}
+
